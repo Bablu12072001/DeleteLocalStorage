@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form onsubmit="ShowUserOnScreen(event)" id=" listofitem">
+    <form onsubmit="ShowUserOnScreen(event)">
       <label>Name</label>
       <input type="text" name="username" required />
       <label>Email</label>
@@ -16,6 +16,9 @@
       <input type="tel" name="phoneNumber" required />
       <button>submit</button>
     </form>
+    <ul id=" listItem">
+      <input type="button" value=" Delete" />
+    </ul>
 
     <script>
       function ShowUserOnScreen(event) {
@@ -37,11 +40,11 @@
       }
 
       function ShowUserOnScreen(obj) {
-        const parentElem = document.getElementById("listofitems");
+        const parentElem = document.getElementById("listItem");
         const childElem = document.getElement("li");
 
         childElem.textConst =
-          obj.name + "-" + obj.email + "-" + obj.phoneNumber;
+          obj.name + " - " + obj.email + " - " + obj.phoneNumber;
 
         const deleteButton = document.createElement("input");
         deleteButton.type = "button";
